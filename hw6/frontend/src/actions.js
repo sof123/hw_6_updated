@@ -12,10 +12,13 @@ export const GET_ZIP_SUCCESS = "app/GET_ZIP_SUCCESS"
 export const GET_EMAIL_SUCCESS = "app/GET_EMAIL_SUCCESS"
 export const SET_ARTICLES_SUCCESS = "app/SET_ARTICLES_SUCCESS"
 export const GET_DOB_SUCCESS = "app/GET_DOB_SUCCESS"
+export const ADD_COMMENT_SUCCESS = "app/ADD_COMMENT_SUCCESS"
+export const EDIT_COMMENT_SUCCESS = "app/EDIT_COMMENT_SUCCESS"
+export const EDIT_ARTICLE_SUCCESS = "app/EDIT_ARTICLE_SUCCESS"
 
 //http://localhost:3000
 //https://webdev-dummy.herokuapp.com
-export const url = 'https://backendsof1.herokuapp.com'
+export const url = 'http://localhost:3000'
 
 
 function isJSONResponse(r) {
@@ -23,6 +26,7 @@ function isJSONResponse(r) {
 }
 
 const resource = (method, endpoint, payload) => {
+  console.log("url is ",url)
   const options = {
     method,
     credentials: 'include',

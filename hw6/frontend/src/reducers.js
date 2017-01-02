@@ -1,7 +1,7 @@
 import resource, { RECEIVE_FOLLOWING, UNFOLLOW_SUCCESS, FOLLOW_SUCCESS, CLEAR_FOLLOW_ERROR,
                   FOLLOW_FAILURE, FETCH_FEED_SUCCESS, UPDATE_ZIP_SUCCESS, UPDATE_ZIP_FAILURE,
                 UPDATE_EMAIL_SUCCESS, GET_ZIP_SUCCESS, GET_EMAIL_SUCCESS, SET_ARTICLES_SUCCESS,
-              SET_KEYWORD_SUCESS, GET_DOB_SUCCESS, UPDATE_DOB_SUCESS} from './actions'
+              SET_KEYWORD_SUCESS, GET_DOB_SUCCESS, UPDATE_DOB_SUCESS, ADD_COMMENT_SUCCESS, EDIT_COMMENT_SUCCESS, EDIT_ARTICLE_SUCCESS} from './actions'
 
 export const Reducer = (state =  {
 	nextId: 2,
@@ -118,6 +118,33 @@ export const Reducer = (state =  {
 			dob: action.payload.dob,
 			success:"success"
 		}
+
+    case ADD_COMMENT_SUCCESS:
+      console.log("in add comment success")
+      console.log("action.payload is ",action.payload)
+  		return {
+  			...state,
+  			articles: action.payload.articles,
+  			success:"success"
+  		}
+
+    case EDIT_COMMENT_SUCCESS:
+        console.log("in edit comment success")
+        console.log("action.payload is ",action.payload)
+    		return {
+    			...state,
+    			articles: action.payload.articles,
+    			success:"success"
+    		}
+
+    case EDIT_ARTICLE_SUCCESS:
+            console.log("in edit article success")
+            console.log("action.payload is ",action.payload)
+        		return {
+        			...state,
+        			articles: action.payload.articles,
+        			success:"success"
+        		}
 
     case RECEIVE_FOLLOWING:
   			return {
