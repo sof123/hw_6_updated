@@ -41,7 +41,7 @@ export const editCommentAction = (comment, id, commentIndex) => (dispatch) => {
 
 export const editArticleAction = (newText, id) => (dispatch) => {
 
-  console.log("Comment editing is ", comment)
+  console.log("new text is ", newText)
   console.log("id is ", id)
   console.log("")
 

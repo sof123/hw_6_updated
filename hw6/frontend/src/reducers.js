@@ -1,7 +1,8 @@
 import resource, { RECEIVE_FOLLOWING, UNFOLLOW_SUCCESS, FOLLOW_SUCCESS, CLEAR_FOLLOW_ERROR,
                   FOLLOW_FAILURE, FETCH_FEED_SUCCESS, UPDATE_ZIP_SUCCESS, UPDATE_ZIP_FAILURE,
                 UPDATE_EMAIL_SUCCESS, GET_ZIP_SUCCESS, GET_EMAIL_SUCCESS, SET_ARTICLES_SUCCESS,
-              SET_KEYWORD_SUCESS, GET_DOB_SUCCESS, UPDATE_DOB_SUCESS, ADD_COMMENT_SUCCESS, EDIT_COMMENT_SUCCESS, EDIT_ARTICLE_SUCCESS} from './actions'
+              SET_KEYWORD_SUCESS, GET_DOB_SUCCESS, UPDATE_DOB_SUCESS, ADD_COMMENT_SUCCESS, EDIT_COMMENT_SUCCESS, EDIT_ARTICLE_SUCCESS,
+            UPDATE_PASSWORD_SUCCESS} from './actions'
 
 export const Reducer = (state =  {
 	nextId: 2,
@@ -15,6 +16,7 @@ export const Reducer = (state =  {
 	zipcode: 0,
 	location: "Landing.js",
 	posts: [],
+  password: "",
 	dob: "",
 	todoItems: [
 	    {id: 0, text: "This is an item", done: false, displayArticles: false},
@@ -29,7 +31,7 @@ export const Reducer = (state =  {
 			}
 
     case 'registerToDo':
-  		return { ...state, nextId: state.nextId + 1, location: "Main.js",
+  		return { ...state, nextId: state.nextId + 1, location: "Landing.js",
             username: action.payload.username,
   					email: action.payload.email,
             zipcode: action.payload.zipcode,
@@ -151,6 +153,12 @@ export const Reducer = (state =  {
   				...state,
   				following: action.payload.following
   			}
+    case UPDATE_PASSWORD_SUCCESS:
+        return {
+          ...state,
+          following: action.payload.following,
+          password: action.payload.status
+        }
 
 
 		default:

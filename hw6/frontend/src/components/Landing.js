@@ -36,7 +36,7 @@ return (
           <table bgcolor="#e0ebeb" className="form">
             <tbody><tr>
                 <td>Account Name</td>
-                <td><input name="AccountName" ref={(node)=> user.username = node}required /></td>
+                <td><input  id="accountNameId" name="AccountName" ref={(node)=> user.username = node}required /></td>
               </tr>
               <tr>
                 <td>Display Name (Optional)</td>
@@ -44,29 +44,29 @@ return (
               </tr>
               <tr>
                 <td>E-mail Address</td>
-                <td><input name="Email" type="email" ref={(node)=> user.email = node} required /></td>
+                <td><input id="emailRegisterId" name="Email" type="email" ref={(node)=> user.email = node} required /></td>
               </tr>
               <tr>
                 <td>Phone Number (format: 5555555555) </td>
-                <td><input name="PhoneNumber" required type="tel" pattern="\d{10}" ref={(node)=> user.phone = node} /></td>
+                <td><input id="phoneRegisterId" name="PhoneNumber" required type="tel" pattern="\d{10}" ref={(node)=> user.phone = node} /></td>
               </tr>
               <tr>
                 <td>Date of Birth (MM/DD/YYYY) </td>
-                <td><input name="DOB" required ref={(node)=> user.dob = node} /></td>
+                <td><input name="DOB" id="dobRegisterId" required ref={(node)=> user.dob = node} /></td>
               </tr>
               <tr>
                 <td>Zipcode (format: 55555) </td>
-                <td><input name="Zipcode" type="number" pattern="\d{5}" required ref={(node)=> user.zip = node} /></td>
+                <td><input name="Zipcode" id="zipcodeRegisterId" type="number" pattern="\d{5}" required ref={(node)=> user.zip = node} /></td>
               </tr>
               <tr>
                 <td>Password</td>
-                <td><input name="Password" required type="password" ref={(node)=> user.password = node} /></td>
+                <td><input name="Password" id="passwordRegisterId" required type="password" ref={(node)=> user.password = node} /></td>
               </tr>
               <tr>
                 <td>Password Confirmation</td>
-                <td><input name="PasswordConfirmation" type="password" required /></td>
+                <td><input name="PasswordConfirmation" id="passwordConfirmationRegisterId" type="password" required /></td>
               </tr>
-              <tr><td colSpan={2}><input type="submit" onClick= {() => register(user)} defaultValue="Submit form" /><br />
+              <tr><td colSpan={2}><input type="button" id="registerId" onClick= {() => register(user)} defaultValue="Submit form" /><br />
                   <input type="reset" defaultValue="Clear" /></td></tr>
             </tbody></table>
           <input type="hidden" name="timeStamp" />
@@ -77,17 +77,17 @@ return (
         <table textAlign="center">
           <tbody><tr>
               <td>Account Name</td>
-              <td>  <input name="AccountName" ref={(node)=> AccountName = node} required />
+              <td>  <input id="username" name="AccountName" ref={(node)=> AccountName = node} required />
                 <span id="AccountNameText"></span>
               </td>
             </tr>
             <tr>
               <td>Password</td>
-              <td><input name="Password" ref={(node)=> password = node} required type="password" />
+              <td><input id="password" name="Password" ref={(node)=> password = node} required type="password" />
                 <span id="PasswordText"></span>
               </td>
             </tr>
-            <tr><td colSpan={2}><input type="button" defaultValue="Login" id="update" onClick={loginClicked} /><br />
+            <tr><td colSpan={2}><input type="button" defaultValue="Login" id="login" onClick={loginClicked} /><br />
               </td></tr>
           </tbody></table>
       </div>

@@ -7,8 +7,9 @@ class CreateArticle extends Component {
     return (
       <div>
         <p>Write a new article</p>
-        <textarea ref={(textarea) => { this.textarea = textarea }}/>
+        <textarea id="articleTextArea" ref={(textarea) => { this.textarea = textarea }}/>
         <button
+          id="articleButton"
           type="button"
           onClick={() => this.props.createArticle(this.textarea.value)}
         >Submit</button>

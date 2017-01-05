@@ -1,7 +1,7 @@
 import resource, { RECEIVE_FOLLOWING, UNFOLLOW_SUCCESS, FOLLOW_SUCCESS, CLEAR_FOLLOW_ERROR,
                   FOLLOW_FAILURE, FETCH_FEED_SUCCESS, UPDATE_ZIP_SUCCESS, UPDATE_ZIP_FAILURE,
                 UPDATE_EMAIL_SUCCESS, GET_ZIP_SUCCESS, GET_EMAIL_SUCCESS, SET_KEYWORD_SUCESS,
-              GET_DOB_SUCCESS, UPDATE_DOB_SUCESS} from '../actions'
+              GET_DOB_SUCCESS, UPDATE_DOB_SUCESS, UPDATE_PASSWORD_SUCCESS} from '../actions'
 
 const updateHeadlineAction = (headline) => (dispatch) =>{
 
@@ -128,6 +128,17 @@ export const updateEmailAction = (newEmail) => (dispatch) =>{
     {
       return (dispatch({
       type: UPDATE_EMAIL_SUCCESS,
+      payload: r
+  }))})
+}
+
+export const updatePasswordAction = (newPassword) => (dispatch) =>{
+  return resource('PUT', 'password', {
+      password: newPassword.value
+  }).then(r =>
+    {
+      return (dispatch({
+      type: UPDATE_PASSWORD_SUCCESS,
       payload: r
   }))})
 }

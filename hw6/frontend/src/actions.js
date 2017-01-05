@@ -15,6 +15,7 @@ export const GET_DOB_SUCCESS = "app/GET_DOB_SUCCESS"
 export const ADD_COMMENT_SUCCESS = "app/ADD_COMMENT_SUCCESS"
 export const EDIT_COMMENT_SUCCESS = "app/EDIT_COMMENT_SUCCESS"
 export const EDIT_ARTICLE_SUCCESS = "app/EDIT_ARTICLE_SUCCESS"
+export const UPDATE_PASSWORD_SUCCESS = "app/UPDATE_PASSWORD_SUCCESS"
 
 //http://localhost:3000
 //https://webdev-dummy.herokuapp.com

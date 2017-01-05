@@ -16,8 +16,8 @@ class Follow extends Component {
         {followError && (
           <p className="error">{followError}</p>
         )}
-        <input ref={this.storeInputRef.bind(this)} type="text" />
-        <button
+        <input id="followInput" ref={this.storeInputRef.bind(this)} type="text"/>
+        <button id="followButton"
           onClick={() => follow(this.input.value)}
           type="button"
         >Follow user</button>

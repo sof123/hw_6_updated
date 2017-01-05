@@ -19,7 +19,7 @@ class Following extends Component {
           <div>
             <p>{username}</p>
             <img height="40" width="40" src="http://worldartsme.com/images/black-stick-figure-clipart-1.jpg" data-reactid=".0.0" />
-            <button onClick={() => this.props.unfollow(username)}>Unfollow</button>
+            <button id="unfollow" name="following" onClick={() => this.props.unfollow(username)}>Unfollow</button>
           </div>
 
         ))}
