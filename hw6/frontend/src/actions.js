@@ -19,7 +19,7 @@ export const UPDATE_PASSWORD_SUCCESS = "app/UPDATE_PASSWORD_SUCCESS"
 
 //http://localhost:3000
 //https://webdev-dummy.herokuapp.com
-export const url = 'http://localhost:3000'
+export const url = 'https://webdev-dummy.herokuapp.com'
 
 
 function isJSONResponse(r) {
